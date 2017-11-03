@@ -338,6 +338,7 @@ class ZendViewRenderer implements TemplateRendererInterface
 
         if ($layout) {
             $layout->addChild($viewModel);
+            $layout->setVariables($this->mergeParams($layout->getTemplate(), []));
             $viewModel = $layout;
         }
 
